@@ -36,14 +36,14 @@ function Wallet() {
       <h3 className="text-center mb-5">Wallet Details</h3>
       {walletDetails && (
         <Card body>
-          <Row sm={9} md={9}>
+          <Row sm={8} md={8}>
             <Col>
               <Card.Title>
                 Wallet ID: <span>{walletDetails._id}</span>
               </Card.Title>
             </Col>
-            <Col sm={3} md={3}>
-              <Button onClick={newTransaction}>Add New Transaction</Button>
+            <Col sm={4} md={4}>
+              <Button style={{float: 'right'}} onClick={newTransaction}>Add New Transaction</Button>
             </Col>
           </Row>
           <hr />
