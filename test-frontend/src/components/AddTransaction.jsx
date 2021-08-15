@@ -34,22 +34,14 @@ function AddTransaction() {
             apiData.description = data.description;
         }
       const apiRes = await API.post(`/transact/${walletID}`, apiData);
-      console.log('FORM DATA+++++==', { res: apiRes.data });
-      if (apiRes.data._id) {
+      if (apiRes?.data?._id) {
         LocalStorage.setWalletId(apiRes.data._id);
         history.push('/');
+      }else {
+        toast.error('Internal Server');
       }
     } catch (error) {
-      toast.error('Internal Server Error', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      console.log(error);
+      toast.error('Internal Server, Please try again');
     }
   };
   return (

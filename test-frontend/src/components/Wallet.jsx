@@ -16,7 +16,7 @@ function Wallet() {
       const walletDetails = await API.get(`/wallet/${walletID}`);
       setWalletDetails(walletDetails.data);
       } catch (error){
-        toast.error('Internal Server Error');
+        toast.error('Internal Server, Please try again');
         console.error(error);
       }
     }

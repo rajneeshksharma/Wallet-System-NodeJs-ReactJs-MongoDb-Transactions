@@ -24,7 +24,7 @@ function Transaction() {
       setTotal(walletDetails.data.totalResults);
       return walletDetails.data.results;
     } catch (error) {
-      toast.error('Internal Server Error');
+      toast.error('Internal Server, Please try again');
     }
   }
   useEffect(() => {

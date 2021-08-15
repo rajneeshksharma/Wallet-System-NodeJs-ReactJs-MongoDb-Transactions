@@ -20,11 +20,11 @@ function SetupWallet() {
             LocalStorage.setWalletId(apiRes.data._id);
             history.push("/");
         } else {
-          toast.error('Internal Server Error');
+          toast.error('Internal Server, Please try again');
         }
     }
     catch(error){
-      toast.error('Internal Server Error');
+      toast.error('Internal Server, Please try again');
     }
   };
 
