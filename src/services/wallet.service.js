@@ -8,7 +8,7 @@ const ApiError = require('../utils/ApiError');
  * @returns {Promise<Wallet>}
  */
 const createWallet = async (walletBody) => {
-  const wallet = await Wallet.create(walletBody);
+  const wallet = await Wallet.create(...walletBody, {amount : Number((walletBody.amount).toFixed(4))});
   return wallet;
 };
 
@@ -42,6 +42,7 @@ const getWalletById = async (id) => {
  * @returns {Promise<Wallet>}
  */
 const updateWalletById = async (walletId, body) => {
+        body.amount = Number((body.amount).toFixed(4));
         const session = await Wallet.startSession();
         session.startTransaction();
         try {
