@@ -113,10 +113,8 @@ function Transaction() {
   return (
     <div className="center">
       <h3 className="text-center mb-5">Wallet Transactions</h3>
-      
         <Button onClick={newTransaction}>Add New Transaction</Button>
-        <Button style={{float: 'right'}} onClick={downloadTransactions}>Download Transactions</Button>
-      
+        {Array.isArray(transactions) && transactions.length && <Button style={{float: 'right'}} onClick={downloadTransactions}>Download Transactions</Button>}
       {Array.isArray(transactions) && transactions.length ? (
         <div>
           <Table responsive>
