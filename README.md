@@ -19,6 +19,9 @@ Live Preview is up on : https://still-hollows-08150.herokuapp.com/
 
 ### APP DETAILS
 
-App Deployed On: https://still-hollows-08150.herokuapp.com
-Demo Video URL: https://www.loom.com/share/b229433e468f4be788ce0c50f74b3a85 
-Postman Collection URL(API endpoints): https://www.getpostman.com/collections/613faa754e291f816769
+App Deployed On: https://still-hollows-08150.herokuapp.com /
+
+Demo Video URL: https://www.loom.com/share/b229433e468f4be788ce0c50f74b3a85 /
+
+Postman Collection URL(API endpoints): https://www.getpostman.com/collections/613faa754e291f816769 /
+
